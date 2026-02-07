@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cursor-x: 50%;
+  --cursor-y: 50%;
+}
+
+body {
+  @apply transition-colors duration-300;
+}
+
+/* Cursor glow effect */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(107, 70, 193, 0.15) 0%,
+    rgba(255, 215, 0, 0.08) 30%,
+    transparent 70%
+  );
+  transition: opacity 0.3s ease;
+  mix-blend-mode: screen;
+}
+
+.dark .cursor-glow {
+  background: radial-gradient(
+    circle,
+    rgba(157, 125, 232, 0.2) 0%,
+    rgba(255, 215, 0, 0.1) 30%,
+    transparent 70%
+  );
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-royal rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-light;
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(107, 70, 193, 0.3);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Tech badge glow */
+.tech-badge {
+  @apply px-3 py-1 rounded-full text-sm border border-purple-royal/30 bg-purple-royal/10 text-purple-light transition-all duration-300;
+}
+
+.tech-badge:hover {
+  @apply border-gold/50 bg-gold/20 text-gold shadow-lg;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.dark .tech-badge {
+  @apply border-purple-light/40 bg-purple-royal/20 text-purple-light;
+}
+
+.dark .tech-badge:hover {
+  @apply border-gold/60 bg-gold/30 text-gold;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
