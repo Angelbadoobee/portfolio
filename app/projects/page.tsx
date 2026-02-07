@@ -7,7 +7,7 @@ export default function Projects() {
       title: 'My Personal Portfolio',
       description: 'This website you\'re on of course!',
       techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'App Router'],
-      url: '', 
+      url: 'https://tahshonholmes.vercel.app/', 
       imageUrl: '/images/PortfolioSite.png', 
     },
     {
