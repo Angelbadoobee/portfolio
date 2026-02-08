@@ -18,6 +18,13 @@ export default function Projects() {
       imageUrl: '/images/CakeSite.png', 
     },    
     {
+      title: 'Spotify Behavioral Analytics Dashboard',
+      description: 'Built a privacy-first analytics dashboard that transforms Spotify Extended Streaming History JSON files into behaviorallistening insights. Engineered a client-side data pipeline supporting multi-file uploads, session merging, and feature extraction (repeat rates, genre diversity entropy, artist loyalty). Integrated Spotify Web API enrichment with intelligent fallbacks to classify listener archetypes and visualize genre evolution, heatmaps, and geographic artist trends. Designed interactive, image-rich dashboards using Recharts and map visualizations for exploratory analysis.',
+      techStack: ['Next.js', 'TypeScript', 'React', 'Recharts', 'Spotify Web API'],
+      url: 'https://angelsspotifywrapped.vercel.app/', 
+      imageUrl: '/images/SpotiSite.png', 
+    }, 
+    {
       title: 'Smith Tech - Old Dominion Center for Education Innovation and Opportunity',
       description: 'SmithTech School of Computer Science, Innovation & Design is dedicated to seamlessly integrating computer science into the curriculum through a human-centered design thinking framework. This collaborative initiative between Chesapeake City Public Schools (CPS) and Old Dominion University (ODU) emphasizes the importance of early academic preparation for underrepresented students in the technology talent pipeline.',
       techStack: ['WordPress', 'HTML', 'CSS', 'CDN'],
